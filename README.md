@@ -1,44 +1,28 @@
-# Yandex 页面汉化
+# Yandex Images 无感跳转
 
-将 Yandex（搜索、翻译、图片、视频等）的英文/俄文界面翻译为中文，提供更友好的浏览体验。
+> 自动将 `yandex.com/images` 跳转到 `yandex.ru/images`，保留所有搜索参数。
 
-## ✨ 功能特点
+## 📌 功能特点
 
-- 全面覆盖 Yandex 主站、翻译、图片搜索、视频等常用页面。
-- 汉化范围包括菜单、按钮、提示、设置项、搜索结果标签等。
-- 支持 `yandex.com`、`yandex.ru`、`ya.ru` 及其所有子域名。
-- 性能优化：修复了原始脚本的内存占用问题，避免页面卡死。
-- 轻量高效：采用 MutationObserver 监听动态内容，翻译及时无延迟。
+- 🔄 自动识别 `yandex.com/images` 及其子路径（如 `/images/search`），无缝跳转至 `yandex.ru/images`。
+- 🧾 完整保留 URL 参数（搜索词、尺寸、过滤条件等），不影响原有搜索体验。
 
-## 📥 安装方法
+## 🧩 搭配使用
 
-1. 安装 Tampermonkey 或 Violentmonkey 等用户脚本管理器。
-2. 点击 [安装此脚本](test)（或复制源码新建脚本）。
-3. 刷新 Yandex 页面，即可看到中文界面。
+推荐与 **[yandex-CHS](https://greasyfork.org/scripts/585821)** 脚本一起使用，该脚本为 Yandex 界面提供简体中文本地化。
+
+## 🛠 安装方式
+
+1. 安装用户脚本管理器（如 Tampermonkey 或 Violentmonkey）。
+2. 点击点击 [安装此脚本](https://github.com/hee1310/Yandex-images-to-ru/raw/main/Yandex-images-to-ru-1.0.user.js)。
+3. 访问 `yandex.com/images` 即可自动跳转。
 
 ## ⚠️ 注意事项
 
-### 关于默认语言（重要！）
+- 脚本仅在 `yandex.com` 域名下生效，不影响 `yandex.ru` 的正常访问。
+- 若 Yandex 调整 URL 结构，请及时更新脚本匹配规则。
+- 如遇跳转循环，检查浏览器缓存或临时禁用其他冲突脚本。
 
-- 本脚本**只负责界面汉化**，不会更改 Yandex 的语言设置。
-- 若访问 `yandex.ru` 或 `ya.ru`，默认语言仍为**俄语**，脚本会将其汉化为中文。
-- 如果您希望 **首次打开时默认为英文**，请：
-  - 直接使用国际版域名 **`yandex.com`**（默认英文）
-  - 在 Yandex 账户设置中将界面语言设为 **English**。
+## 📄 开源协议
 
-### 兼容性
-
-- 适用于支持Tampermonkey 或 Violentmonkey 等用户脚本管理器的主流浏览器。
-- 与其他用户脚本可能冲突，建议仅启用本脚本访问 Yandex。
-
-## 🛠️ 技术说明
-
-- 采用 `document-start` 运行，页面加载时立即隐藏内容，翻译完成后显示，避免闪烁。
-- 使用 `MutationObserver` 监听 DOM 变化，动态翻译新加载的内容。
-- 词典按功能模块分类，便于维护和扩展。
-
-## 🙏 贡献与反馈
-
-欢迎提交 Issue 或 Pull Request，补充缺失的翻译条目或提出改进建议。
-
-> 提示：本脚本仅为界面汉化，不涉及任何数据收集或修改。如需帮助，请访问脚本主页或联系作者。
+MIT License
