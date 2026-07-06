@@ -1,4 +1,4 @@
-//==UserScript==
+// ==UserScript==
 // @name         Yandex Images 无感跳转
 // @namespace    http://tampermonkey.net/
 // @version      1.0
