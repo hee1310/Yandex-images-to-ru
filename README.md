@@ -12,7 +12,7 @@
 
 1. 安装用户脚本管理器（如 [Tampermonkey](https://www.tampermonkey.net/) 或 [Violentmonkey](https://violentmonkey.github.io/)）。
 2. 点击以下链接安装脚本：  
-   👉 [安装 Yandex Images 无感跳转](https://github.com/hee1310/Yandex-images-to-ru/raw/main/Yandex-images-to-ru-1.0.user.js)
+   👉 [安装 Yandex Images 去除限制](https://github.com/hee1310/Yandex-images-to-ru/raw/main/Yandex-images-to-ru-1.0.user.js)
 3. 访问 `yandex.com/images`，脚本将自动生效。
 
 ## 📦 搭配推荐
